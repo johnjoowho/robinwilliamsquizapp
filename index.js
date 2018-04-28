@@ -58,7 +58,7 @@ function generateResults() {
       <section id="final-page">
         <p class="final-score">Final Score: ${calculateScore()} out of 10</p>
         <p class="final-message">Congratulations, you are a certified obscure Robin Williams quote level 1 specialist!</p>
-        <img class="results-img" src="https://media1.giphy.com/media/5ns1wuK1Y3NKxkm3qO/giphy.gif">
+        <img class="results-img" src="https://media1.giphy.com/media/5ns1wuK1Y3NKxkm3qO/giphy.gif" alt="Robin Dancing">
         <div></div>
         <button id="reset-button" type="reset">Start Over</button>
       </section>
@@ -69,7 +69,7 @@ function generateResults() {
     <section id="final-page">
       <p class="final-score">Final Score: ${calculateScore()} out of 10</p>
       <p class="final-message">You have failed the test. But Robin is sympathetic to your shortcomings.</p>
-      <img class="results-img" src="https://media.giphy.com/media/Dvw2lJqlTuJmo/giphy.gif">
+      <img class="results-img" src="https://media.giphy.com/media/Dvw2lJqlTuJmo/giphy.gif" alt="Robin consoling you">
       <div></div>
       <button id="reset-button" type="reset">Start Over</button>
     </section>
@@ -81,9 +81,8 @@ function generateQuestion(question, questionNumber) {
   return `
     <form id="quiz-form">
     <fieldset class="quiz-box" class="col-3">
-      <p class="quiz-question-number">Question #${questionNumber+1}</p>
       <legend class="question" class="col-6">"${question.text}"</legend>
-
+      <p class="quiz-question-number">Question #${questionNumber+1}</p>
       <ul class="choices-outside" background=url"http://www.wallpapers13.com/wp-content/uploads/2017/12/Genie-character-from-the-cartoon-Aladdin-HD-Wallpaper-1920x1080.jpg">
         ${question.answers.map(function(answer, answerNumber){
           return `
@@ -110,7 +109,7 @@ function generateFeedback(answer) {
   <div class="correct-alert">
     <p class="alert-text">You are absolutely correct!  Robin would be proud of you.</p>
     <br>
-    <img class="feedback-img"  src="https://media3.giphy.com/media/WSTXcFbR2ZQOY/giphy.gif" >
+    <img class="feedback-img"  src="https://media3.giphy.com/media/WSTXcFbR2ZQOY/giphy.gif" alt="Robin blowing a kiss">
     
     <button id="next-button" type="button">Go to the next question!</button>
     <button id="reset-button" type="reset">Start Over</button>
@@ -119,7 +118,7 @@ function generateFeedback(answer) {
   `<div class="incorrect-alert">
     <p class="alert-text">You are wrong.  Robin is disappointed in you.
     The correct answer is "${getCorrectAnswer(STORE[answers.length-1]).text}"</p>
-    <img src="https://media2.giphy.com/media/BgN8YjBN0ZQis/giphy.gif" class="feedback-img">
+    <img src="https://media2.giphy.com/media/BgN8YjBN0ZQis/giphy.gif" class="feedback-img" alt="Genie scolding Aladdin">
     
     <button id="next-button" type="button">Go to the next question!</button>
     <button id="reset-button" type="reset">Start Over</button>
@@ -133,7 +132,7 @@ function generateFeedback(answer) {
       <div class="correct-alert">
         <p class="alert-text">You are absolutely correct!  Robin would be proud of you.</p>
         <br>
-        <img class="feedback-img"  src="https://media3.giphy.com/media/WSTXcFbR2ZQOY/giphy.gif" >
+        <img class="feedback-img"  src="https://media3.giphy.com/media/WSTXcFbR2ZQOY/giphy.gif" alt="Robin dancing">
         
         <button id="next-button" type="button">See the results!</button>
         <button id="reset-button" type="reset">Start Over</button>
@@ -142,8 +141,7 @@ function generateFeedback(answer) {
       `<div class="incorrect-alert">
         <p class="alert-text">You are wrong.  Robin is disappointed in you.
         The correct answer is "${getCorrectAnswer(STORE[answers.length-1]).text}"</p>
-        <img src="https://media2.giphy.com/media/BgN8YjBN0ZQis/giphy.gif" class="feedback-img">
-        
+        <img src="https://media2.giphy.com/media/BgN8YjBN0ZQis/giphy.gif" class="feedback-img" alt="Genie scolding Aladdin">
         <button id="next-button" type="button">See the results!</button>
         <button id="reset-button" type="reset">Start Over</button>
       </div>

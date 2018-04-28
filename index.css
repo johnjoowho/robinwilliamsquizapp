@@ -79,9 +79,9 @@ li {
   display: inline-block; 
   height: 150; 
   width: 300px;
-  background-color: orange; 
-  color: orangered; 
-  border: none; 
+  background-color: rgb(255, 207, 117); 
+  color: green; 
+  border: 1px solid orange; 
   cursor: pointer; 
   font-size: 25px;
 }
@@ -105,9 +105,9 @@ li {
 }
 
 .second-instruction { 
-  font-size: 20px; 
+  font-size: 25px; 
   margin: 10; 
-  color: orange; 
+  color: orangered; 
 }
 
 .page-title {
@@ -118,9 +118,9 @@ li {
 }
 
 .scoreboard {  
-  font-size: 20px; 
+  font-size: 25px; 
   max-height: 100px; 
-  color: orangered; 
+  color: green; 
   padding: 5px;  
   margin: 0;
   text-align: center;
